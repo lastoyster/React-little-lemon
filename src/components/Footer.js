@@ -1,41 +1,69 @@
-import React from 'react';
-import footer_img from "../images/logo.png"
+import { Link } from "react-router-dom";
+export default function Footer() {
+  return (
+    <footer>
+      <menu>
+        <li className="img-footer">
+          <img
+            src={require("../assets/footer-logo.png")}
+            alt="Little Lemon logo"
+          ></img>
+        </li>
+        <li className="contact">
+          <h1 className="footer-header">Navigation</h1>
+          <ul className="footer-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <a
+              href={require("../assets/menu.webp")}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Menu
+            </a>
+            <Link to="/reservations">Reservations</Link>
+            <Link to="/order">Order</Link>
+            <Link to="/login">Login</Link>
+          </ul>
+        </li>
 
-const Footer = () => {
-    return (
-        <>
-            <section className="footer-section" id="footer">
-                <img  className="footer-image" src={footer_img} alt="logo" />
-                <div className="row">
-                    {/* <div className="col-lg-3 footer-logo">
-                        <img  className="footer-image" src={footer_img} alt="logo" />
-                    </div> */}
-                    <div className="col-lg-4 footer-nav">
-                        <h3>Navigation</h3>
-                        <p>Home</p>
-                        <p>About</p>
-                        <p>Menu</p>
-                        <p>Reservation</p>
-                        <p>Order Online</p>
-                    </div>
-                    <div className="col-lg-4 footer-contact">
-                        <h3>Contact</h3>
-                        <p>950 Everest Way, Suite#120</p>
-                        <p>Fort Collins, CO, 80020</p>
-                    </div>
-                    <div className="col-lg-4 social-media">
-                        <h3>Social-Media</h3>
-                        <p>Facebook</p>
-                        <p>Twitter</p>
-                        <p>Instagram</p>
-                        <p>Youtube</p>
-                        <p>Trip Advisor</p>
-                    </div>
-                </div>
-                <p>Copy Rights &copy; 2023 Little Lemon | All Right Reserved.</p>
-            </section>
-        </>
-    );
-};
-
-export default Footer;
+        <li>
+          <h1 className="footer-header">Contact</h1>
+          <ul className="footer-links">
+            <li>2395 Maldove Way,</li>
+            <li>Chicago Illinois</li>
+            <br></br>
+            <li>(629)-243-6827</li>
+            <br></br>
+            <a
+              href="mailto: info@littlelemon.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              info@littlelemon.com
+            </a>
+          </ul>
+        </li>
+        <li>
+          <h1 className="footer-header">Connect</h1>
+          <ul className="footer-links">
+            <a
+              href="https://www.facebook.com/thelittlelemonshop/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/littlelemonmoon/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+          </ul>
+        </li>
+      </menu>
+    </footer>
+  );
+}
